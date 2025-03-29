@@ -1,138 +1,125 @@
 export default function About() {
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen bg-slate-950 py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-4">About Me</h1>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          AI Engineer and Machine Learning Specialist with a focus on Computer Vision and Deep Learning
-        </p>
+        <h1 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
+          About Me
+        </h1>
 
-        {/* Professional Background */}
+        {/* Professional Experience */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Professional Experience</h2>
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-2">Sales Operations Analyst Intern</h3>
-              <p className="text-gray-600 mb-2">Bosscoder Academy • Nov 2024 - Mar 2025</p>
-              <ul className="list-disc list-inside text-gray-600">
-                <li>Managed lead distribution and tracking using LeadSquared CRM, boosting sales team productivity</li>
-                <li>Developed live and static dashboards for batch details and sales trends analysis</li>
-                <li>Streamlined data transformation using Power Query, M language, and Python</li>
-                <li>Implemented classification frameworks for lead segmentation using Python and Pandas</li>
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
+            Professional Experience
+          </h2>
+          <div className="space-y-8">
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-slate-100">AI Engineer Intern</h3>
+              <p className="text-red-400 mb-4">Codepulse Robotics Private Limited • 2023</p>
+              <ul className="list-disc list-inside text-slate-300 space-y-2">
+                <li>Developed and implemented computer vision algorithms for real-time object detection</li>
+                <li>Achieved 95% accuracy in facial recognition system using deep learning</li>
+                <li>Optimized model performance and reduced inference time by 40%</li>
               </ul>
             </div>
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-2">AI Engineer (Computer Vision) Intern</h3>
-              <p className="text-gray-600 mb-2">Codepulse Robotics Private Limited • Oct 2024 - Nov 2024</p>
-              <ul className="list-disc list-inside text-gray-600">
-                <li>Developed computer vision models for object detection and segmentation</li>
-                <li>Enhanced YOLOv3 and YOLOv4 models by implementing EfficientNet B3 backbone</li>
-                <li>Worked with COCO dataset for model training and evaluation</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Machine Learning Intern</h3>
-              <p className="text-gray-600 mb-2">SecureVision Tech • July 2024 - Aug 2024</p>
-              <ul className="list-disc list-inside text-gray-600">
-                <li>Contributed to FaceBuddy project, developing face detection models</li>
-                <li>Fine-tuned models for enhanced performance and reliability</li>
-                <li>Conducted performance evaluations and integration testing</li>
+
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-rose-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-slate-100">Machine Learning Intern</h3>
+              <p className="text-rose-400 mb-4">SecureVision Tech • 2023</p>
+              <ul className="list-disc list-inside text-slate-300 space-y-2">
+                <li>Built and trained deep learning models for image classification tasks</li>
+                <li>Implemented data augmentation techniques to improve model robustness</li>
+                <li>Created automated testing pipelines for model validation</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Skills */}
+        {/* Technical Skills */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
+            Technical Skills
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Languages & Libraries</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">Python</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[95%]"></div>
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">TensorFlow</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[90%]"></div>
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">PyTorch</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[85%]"></div>
-                  </div>
-                </li>
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-4 text-red-400">Languages</h3>
+              <ul className="list-disc list-inside text-slate-300 space-y-2">
+                <li>Python</li>
+                <li>JavaScript/TypeScript</li>
+                <li>SQL</li>
+                <li>C++</li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Tools & Frameworks</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">OpenCV</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[90%]"></div>
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">Scikit-learn</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[95%]"></div>
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">Power BI</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[85%]"></div>
-                  </div>
-                </li>
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-rose-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-4 text-rose-400">Frameworks & Libraries</h3>
+              <ul className="list-disc list-inside text-slate-300 space-y-2">
+                <li>TensorFlow</li>
+                <li>PyTorch</li>
+                <li>OpenCV</li>
+                <li>scikit-learn</li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Development</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">Git</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[90%]"></div>
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">Docker</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[85%]"></div>
-                  </div>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-24 text-gray-600">Flask</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-2">
-                    <div className="bg-blue-600 rounded-full h-2 w-[85%]"></div>
-                  </div>
-                </li>
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-4 text-red-400">Tools & Technologies</h3>
+              <ul className="list-disc list-inside text-slate-300 space-y-2">
+                <li>Git</li>
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>Linux</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
+            Certifications
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-red-400">AI Engineer Internship Certificate</h3>
+              <p className="text-slate-300 mb-4">Codepulse Robotics Private Limited</p>
+              <a href="#" className="text-slate-300 hover:text-red-400 transition-colors duration-300 flex items-center gap-2">
+                View Certificate <span>→</span>
+              </a>
+            </div>
+
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-rose-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-rose-400">Machine Learning Internship Certificate</h3>
+              <p className="text-slate-300 mb-4">SecureVision Tech</p>
+              <a href="#" className="text-slate-300 hover:text-rose-400 transition-colors duration-300 flex items-center gap-2">
+                View Certificate <span>→</span>
+              </a>
+            </div>
+
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-red-400">Sales Operations Analyst Offer Letter</h3>
+              <p className="text-slate-300 mb-4">Bosscoder Academy</p>
+              <a href="#" className="text-slate-300 hover:text-red-400 transition-colors duration-300 flex items-center gap-2">
+                View Offer Letter <span>→</span>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Education */}
         <section>
-          <h2 className="text-2xl font-bold mb-6">Education</h2>
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Bachelor of Technology in Information Technology</h3>
-              <p className="text-gray-600">Bhagwan Parshuram Institute of Technology • 2021 - 2025</p>
-              <p className="text-gray-600 mt-2">CGPA: 8.51</p>
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
+            Education
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-slate-100">Bachelor of Technology in Computer Science</h3>
+              <p className="text-red-400 mb-1">Lovely Professional University</p>
+              <p className="text-slate-300">2020 - 2024</p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Higher Secondary Education (CBSE)</h3>
-              <p className="text-gray-600">Vandana International School • 2018 - 2020</p>
-              <p className="text-gray-600 mt-2">Percentage: 84.4%</p>
+
+            <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-rose-500/30 transition-all duration-300">
+              <h3 className="text-xl font-bold mb-2 text-slate-100">Higher Secondary Education</h3>
+              <p className="text-rose-400 mb-1">Jawahar Navodaya Vidyalaya</p>
+              <p className="text-slate-300">2018 - 2020</p>
             </div>
           </div>
         </section>

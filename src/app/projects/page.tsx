@@ -3,97 +3,194 @@ import Image from 'next/image';
 export default function Projects() {
   const projects = [
     {
-      title: "Machine Learning Project",
-      description: "Developed a predictive analytics model for customer behavior analysis using advanced machine learning techniques. The model achieved 85% accuracy in predicting customer churn.",
-      image: "/project1.jpg",
-      technologies: ["Python", "TensorFlow", "Scikit-learn", "Pandas"],
-      github: "https://github.com/yourusername/project1",
-      demo: "https://demo-project1.com"
+      title: "Tweet Recognition & Analysis",
+      image: "/TRT.webp",
+      description: "Deep learning models for emotion classification using LSTM, GRU, and CNN architectures. Achieved 89% accuracy in sentiment analysis.",
+      tags: ["TensorFlow", "Deep Learning", "NLP"],
+      link: "https://github.com/shivam-singh-git/tweet-recognition"
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Created an interactive dashboard for sales analytics using Plotly and Dash. The dashboard provides real-time insights into sales trends and customer behavior.",
-      image: "/project2.jpg",
-      technologies: ["Python", "Plotly", "Dash", "SQL"],
-      github: "https://github.com/yourusername/project2",
-      demo: "https://demo-project2.com"
+      title: "Brain Tumor Detection",
+      image: "/BTD.jpg",
+      description: "CNN-based model achieving 93% accuracy in detecting brain tumors from MRI scans. Implemented using Keras and TensorFlow.",
+      tags: ["Keras", "CNN", "Computer Vision"],
+      link: "https://github.com/shivam-singh-git/brain-tumor-detection"
     },
     {
-      title: "Natural Language Processing",
-      description: "Implemented sentiment analysis on customer feedback using NLP techniques. The system processes thousands of reviews to provide actionable insights.",
-      image: "/project3.jpg",
-      technologies: ["Python", "NLTK", "SpaCy", "Transformers"],
-      github: "https://github.com/yourusername/project3",
-      demo: "https://demo-project3.com"
+      title: "Stock Market Prediction",
+      image: "/stocks.jpg",
+      description: "LSTM-based model for stock price prediction using historical data and sentiment analysis from financial news.",
+      tags: ["PyTorch", "Time Series", "NLP"],
+      link: "https://github.com/shivam-singh-git/stock-prediction"
     },
     {
-      title: "Time Series Analysis",
-      description: "Developed a time series forecasting model for stock price prediction using LSTM networks and statistical methods.",
-      image: "/project4.jpg",
-      technologies: ["Python", "Keras", "Statsmodels", "Pandas"],
-      github: "https://github.com/yourusername/project4",
-      demo: "https://demo-project4.com"
+      title: "Object Detection System",
+      image: "/object-detection.jpg",
+      description: "Real-time object detection system using YOLOv5 with custom training for specific object classes.",
+      tags: ["PyTorch", "YOLO", "Computer Vision"],
+      link: "https://github.com/shivam-singh-git/object-detection"
     }
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen bg-slate-950 py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-4">Data Science Projects</h1>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          A collection of my data science projects showcasing machine learning, data analysis, and visualization skills.
-        </p>
+        <h1 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent">
+          Projects
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-64 relative">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                
-                <div className="mb-6">
-                  <h3 className="font-semibold mb-2">Technologies Used:</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Tweet Recognition Project */}
+          <div className="bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4 text-slate-100">Tweet Recognition</h3>
+              <p className="text-slate-300 mb-6">
+                A deep learning project focused on emotion classification in tweets using LSTM, GRU, and CNN architectures.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-red-400">Key Features</h4>
+                  <ul className="list-disc list-inside text-slate-300 space-y-1">
+                    <li>Multi-class emotion classification</li>
+                    <li>LSTM and GRU implementations</li>
+                    <li>CNN for text classification</li>
+                    <li>Data preprocessing pipeline</li>
+                  </ul>
                 </div>
-
-                <div className="flex gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition-colors"
-                  >
-                    View Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-                  >
-                    Live Demo
-                  </a>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-rose-400">Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      TensorFlow
+                    </span>
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      Keras
+                    </span>
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      NLP
+                    </span>
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      Python
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Brain Tumor Detection */}
+          <div className="bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-700 hover:border-rose-500/30 transition-all duration-300">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4 text-slate-100">Brain Tumor Detection</h3>
+              <p className="text-slate-300 mb-6">
+                CNN-based model achieving 93% accuracy in detecting brain tumors from MRI scans.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-red-400">Key Features</h4>
+                  <ul className="list-disc list-inside text-slate-300 space-y-1">
+                    <li>MRI scan preprocessing</li>
+                    <li>Custom CNN architecture</li>
+                    <li>Data augmentation pipeline</li>
+                    <li>93% detection accuracy</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-rose-400">Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      PyTorch
+                    </span>
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      OpenCV
+                    </span>
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      NumPy
+                    </span>
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      Pandas
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Face Recognition */}
+          <div className="bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-700 hover:border-red-500/30 transition-all duration-300">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4 text-slate-100">Face Recognition System</h3>
+              <p className="text-slate-300 mb-6">
+                Real-time face detection and recognition system using deep learning and computer vision.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-red-400">Key Features</h4>
+                  <ul className="list-disc list-inside text-slate-300 space-y-1">
+                    <li>Real-time face detection</li>
+                    <li>Face embedding generation</li>
+                    <li>Multi-face tracking</li>
+                    <li>95% recognition accuracy</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-rose-400">Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      TensorFlow
+                    </span>
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      OpenCV
+                    </span>
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      dlib
+                    </span>
+                    <span className="px-3 py-1 bg-red-900/30 text-red-300 rounded-full text-sm border border-red-700/30">
+                      Python
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Object Detection */}
+          <div className="bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-700 hover:border-rose-500/30 transition-all duration-300">
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4 text-slate-100">Real-time Object Detection</h3>
+              <p className="text-slate-300 mb-6">
+                YOLO-based object detection system for real-time video streams and images.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-red-400">Key Features</h4>
+                  <ul className="list-disc list-inside text-slate-300 space-y-1">
+                    <li>Real-time object detection</li>
+                    <li>Multiple object tracking</li>
+                    <li>Custom model training</li>
+                    <li>Video stream processing</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-rose-400">Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      YOLO
+                    </span>
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      OpenCV
+                    </span>
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      PyTorch
+                    </span>
+                    <span className="px-3 py-1 bg-rose-900/30 text-rose-300 rounded-full text-sm border border-rose-700/30">
+                      Python
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

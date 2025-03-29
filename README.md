@@ -12,9 +12,10 @@ My personal portfolio website showcasing my projects and skills in AI, Machine L
 ## Features
 
 - Responsive design
-- Project showcase
+- Project showcase with live demos
 - Skills and experience section
 - Contact form
+- Research publications and certificates
 - Dark/Light mode support
 
 ## Local Development
@@ -55,5 +56,10 @@ This website is deployed on Vercel. To deploy your own version:
 ## Contact
 
 - Email: shivamsingh8826105@gmail.com
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- LinkedIn: [Shivam Singh](https://linkedin.com/in/ShivamSingh19)
+- GitHub: [shivam-singh-git](https://github.com/shivam-singh-git)
+
+## Research & Publications
+
+- Tweet Recognition using TensorFlow - Published in Springer Series Conference (ICICC)
+- [View Implementation](https://github.com/shivam-singh-git/Tweet-recognition-using-TensorFlow)
