@@ -25,7 +25,7 @@ export default function Home() {
             <Typewriter 
               text="Hello, I'm Shivam Singh! Welcome to My Portfolio!" 
               speed={50}
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-violet-700 to-blue-700 bg-clip-text text-transparent relative z-30 tracking-wider leading-tight"
+              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-violet-700 to-blue-700 bg-clip-text text-transparent tracking-wider leading-tight"
             />
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
               AI Engineer & Machine Learning Specialist
