@@ -1,6 +1,11 @@
 'use client';
 
 import Typewriter from '@/components/Typewriter';
+import { projects } from '@/data/projects';
+
+const skills = [
+  'Python', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'TensorFlow', 'PyTorch', 'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Git', 'Docker'
+];
 
 export default function Home() {
   return (
@@ -83,7 +88,41 @@ export default function Home() {
           <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
             Projects
           </h2>
-          <div className="text-center text-slate-500">[Projects will be listed here]</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {Object.entries(projects).map(([slug, project]) => (
+              <div key={slug} className="bg-white rounded-xl shadow-md p-6 border border-slate-200">
+                <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                <p className="text-slate-600 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-violet-100 text-violet-700 rounded-full text-sm font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-4">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-violet-600 hover:text-violet-800 underline"
+                  >
+                    View Code
+                  </a>
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -93,7 +132,13 @@ export default function Home() {
           <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
             Skills
           </h2>
-          <div className="text-center text-slate-500">[Skills will be listed here]</div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {skills.map((skill) => (
+              <span key={skill} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-lg font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -103,7 +148,13 @@ export default function Home() {
           <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
             Contact
           </h2>
-          <div className="text-center text-slate-500">[Contact form or info will be here]</div>
+          <div className="max-w-xl mx-auto bg-white rounded-xl shadow-md p-8 border border-slate-200">
+            <p className="text-center text-slate-600 mb-4">You can reach me at <a href="mailto:your.email@example.com" className="text-violet-600 underline">your.email@example.com</a> or connect with me on LinkedIn.</p>
+            <div className="flex justify-center gap-6">
+              <a href="https://github.com/shivam-singh-git" target="_blank" rel="noopener noreferrer" className="text-slate-700 hover:text-violet-600 text-2xl">GitHub</a>
+              <a href="https://linkedin.com/in/shivam-singh-git" target="_blank" rel="noopener noreferrer" className="text-slate-700 hover:text-violet-600 text-2xl">LinkedIn</a>
+            </div>
+          </div>
         </div>
       </section>
     </div>
