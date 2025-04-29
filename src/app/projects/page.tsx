@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { projects, Project } from '@/data/projects';
 
 export default function ProjectsPage() {
@@ -11,11 +12,13 @@ export default function ProjectsPage() {
           {Object.entries(projects).map(([slug, project]: [string, Project]) => (
             <div key={slug} className="bg-slate-800 rounded-lg p-6 border border-violet-500/20 hover:border-violet-500/40 transition-all duration-300">
               <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/3">
-                  <img 
+                <div className="md:w-1/3 relative h-48">
+                  <Image 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-48 object-cover rounded-lg"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="md:w-2/3">
