@@ -76,6 +76,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+            Projects
+          </h2>
+          <div className="text-center text-slate-500">[Projects will be listed here]</div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-24 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+            Skills
+          </h2>
+          <div className="text-center text-slate-500">[Skills will be listed here]</div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
+            Contact
+          </h2>
+          <div className="text-center text-slate-500">[Contact form or info will be here]</div>
+        </div>
+      </section>
     </div>
   );
 }
