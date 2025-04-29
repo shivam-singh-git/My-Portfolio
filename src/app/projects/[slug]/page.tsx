@@ -1,77 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import { projects } from '@/data/projects';
 
 interface ProjectPageProps {
   params: {
     slug: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const projects = {
-  'ai-image-generator': {
-    title: 'AI Image Generator',
-    year: '2024',
-    description: 'A powerful AI image generation tool using Stable Diffusion. Create unique images from text descriptions with advanced customization options.',
-    longDescription: `The AI Image Generator is a sophisticated web application that leverages the power of Stable Diffusion to create unique images from text descriptions. 
-    Features include:
-    • Advanced prompt engineering with negative prompts
-    • Multiple model selection
-    • Image size customization
-    • Real-time generation preview
-    • Image history and favorites
-    • Responsive design for all devices`,
-    technologies: ['React', 'Next.js', 'Stable Diffusion API', 'Tailwind CSS'],
-    github: 'https://github.com/shivam-singh-git/ai-image-generator',
-    demo: 'https://ai-image-generator-demo.vercel.app',
-    image: '/projects/ai-image-generator.png'
-  },
-  'portfolio-website': {
-    title: 'Portfolio Website',
-    year: '2024',
-    description: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations and a clean design.',
-    longDescription: `This portfolio website showcases my work and skills in a modern, interactive way. 
-    Features include:
-    • Responsive design for all devices
-    • Smooth scroll animations
-    • Dynamic project showcase
-    • Contact form with EmailJS integration
-    • Modern UI with gradient effects
-    • Typewriter animations
-    • SEO optimized`,
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'EmailJS'],
-    github: 'https://github.com/shivam-singh-git/portfolio',
-    demo: 'https://shivam-singh.vercel.app',
-    image: '/projects/portfolio.png'
-  },
-  'customer-churn-prediction': {
-    title: 'Customer Churn Prediction',
-    year: '2024',
-    description: 'An interactive dashboard for predicting customer churn using machine learning. Built with Python, Streamlit, and XGBoost.',
-    longDescription: `A sophisticated web application that helps businesses predict and prevent customer churn using advanced machine learning techniques.
-    
-    Key Features:
-    • Real-time churn prediction using XGBoost
-    • Interactive data visualization with Plotly
-    • Comprehensive model performance metrics
-    • User-friendly interface built with Streamlit
-    • Detailed customer insights and recommendations
-    
-    Technical Details:
-    • Achieved 85% accuracy in churn prediction
-    • Implemented feature importance analysis
-    • Built responsive and interactive dashboards
-    • Developed automated ML pipeline
-    • Integrated real-time prediction capabilities`,
-    technologies: ['Python', 'Streamlit', 'XGBoost', 'Plotly', 'Scikit-learn'],
-    github: 'https://github.com/shivam-singh-git/customer-churn-prediction',
-    demo: 'https://customer-churn-prediction.streamlit.app',
-    image: '/projects/customer-churn.png'
-  },
-  // Add other projects here...
-};
-
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects[params.slug as keyof typeof projects];
+  const project = projects[params.slug];
 
   if (!project) {
     return (
@@ -118,7 +57,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
               <div className="flex gap-4">
                 <a
-                  href={project.github}
+                  href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors"
@@ -128,32 +67,24 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   </svg>
                   View Source Code
                 </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  Live Demo
-                </a>
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
             <div className="md:w-1/2">
               <h1 className="text-4xl font-bold text-slate-800 mb-4">{project.title}</h1>
-              <p className="text-slate-600 mb-6">{project.year}</p>
-              <div className="prose prose-slate max-w-none">
-                <p className="text-lg text-slate-700 mb-6">{project.description}</p>
-                <div className="space-y-4">
-                  {project.longDescription.split('\n').map((paragraph, index) => (
-                    <p key={index} className="text-slate-600">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
+              <p className="text-slate-600 mb-6">{project.description}</p>
             </div>
           </div>
         </div>
