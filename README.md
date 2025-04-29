@@ -1,65 +1,45 @@
-# Shivam Singh - Portfolio
+# Shivam Singh - AI Engineer & ML Specialist
 
-My personal portfolio website showcasing my projects and skills in AI, Machine Learning, and Computer Vision.
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=40&pause=1000&color=6366F1&center=true&vCenter=true&random=false&width=600&height=100&lines=Hello%2C+I'm+Shivam+Singh!;AI+Engineer+%26+ML+Specialist;Building+the+Future+with+AI" alt="Typing SVG" />
+</div>
 
-## Technologies Used
+## About Me
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- React
+I'm a passionate AI Engineer and Machine Learning Specialist with a deep fascination for the intersection of data science and artificial intelligence. My journey in AI began with a curiosity about how video games work, which led me to explore GPU technology and neural networks. This passion has evolved into a professional pursuit of building innovative AI solutions and pushing the boundaries of what's possible with machine learning.
 
-## Features
+## 🌟 Featured Projects
 
-- Responsive design
-- Project showcase with live demos
-- Skills and experience section
-- Contact form
-- Research publications and certificates
-- Dark/Light mode support
+- **Sentiment Analysis Using Deep Learning** - Published in ICICC Springer Journal
+- **Tweet Recognition using TensorFlow** - Advanced NLP implementation
+- [View More Projects](https://shivam-singh-git.github.io/My-Portfolio/projects)
 
-## Local Development
+## 🚀 Live Portfolio
 
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd portfolio
-```
+**✨ Experience my work in action: [Visit My Portfolio](https://shivam-singh-git.github.io/My-Portfolio)**
 
-2. Install dependencies:
-```bash
-npm install
-```
+## 🛠️ Tech Stack
 
-3. Create a `.env` file:
-```bash
-cp .env.example .env
-```
+- **Frontend:** Next.js, React, TypeScript, Tailwind CSS
+- **AI/ML:** TensorFlow, PyTorch, Scikit-learn
+- **Tools:** Git, Docker, VS Code
+- **Cloud:** AWS, Google Cloud Platform
 
-4. Run the development server:
-```bash
-npm run dev
-```
+## 📫 Connect With Me
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+- **Email:** shivamsingh8826105@gmail.com
+- **LinkedIn:** [Shivam Singh](https://linkedin.com/in/ShivamSingh19)
+- **GitHub:** [shivam-singh-git](https://github.com/shivam-singh-git)
 
-## Deployment
+## 📚 Research & Publications
 
-This website is deployed on Vercel. To deploy your own version:
+- **Sentiment Analysis Using Deep Learning** - ICICC Springer Journal
+  - Achieved 91% accuracy with GRU model
+  - Comprehensive analysis of LSTM, GRU, CNN-LSTM architectures
+  - [View Implementation](https://github.com/shivam-singh-git/Tweet-recognition-using-TensorFlow)
 
-1. Push your code to GitHub
-2. Visit [Vercel](https://vercel.com)
-3. Import your GitHub repository
-4. Follow the deployment steps
-5. Your site will be live!
+---
 
-## Contact
-
-- Email: shivamsingh8826105@gmail.com
-- LinkedIn: [Shivam Singh](https://linkedin.com/in/ShivamSingh19)
-- GitHub: [shivam-singh-git](https://github.com/shivam-singh-git)
-
-## Research & Publications
-
-- Tweet Recognition using TensorFlow - Published in Springer Series Conference (ICICC)
-- [View Implementation](https://github.com/shivam-singh-git/Tweet-recognition-using-TensorFlow)
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=shivam-singh-git&style=flat-square&color=blue" alt="Profile Views"/>
+</div>
