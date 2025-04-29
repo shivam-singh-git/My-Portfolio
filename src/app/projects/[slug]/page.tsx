@@ -1,15 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { projects } from '@/data/projects';
 
-interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const project = projects[params.slug];
 
   if (!project) {
@@ -39,10 +36,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
               <div className="relative aspect-video rounded-xl overflow-hidden mb-6">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               </div>
               <div className="flex flex-wrap gap-2 mb-6">
