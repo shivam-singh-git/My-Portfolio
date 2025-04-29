@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export function generateStaticParams() {
+  return Object.keys(projects).map(slug => ({ slug }));
+}
+
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = projects[params.slug];
 
   if (!project) {
