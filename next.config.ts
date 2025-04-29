@@ -11,9 +11,8 @@ const nextConfig = {
       },
     ],
   },
-  basePath: '/portfolio',
-  assetPrefix: '/portfolio/',
-  // Add other config options here
+  basePath: '/My-Portfolio',
+  assetPrefix: '/My-Portfolio/',
 };
 
 export default nextConfig;
