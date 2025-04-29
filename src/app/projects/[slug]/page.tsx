@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
 
-export function generateStaticParams() {
-  return Object.keys(projects).map(slug => ({ slug }));
+export async function generateStaticParams() {
+  // Use actual slugs from the projects object
+  const slugs = Object.keys(projects);
+  return slugs.map(slug => ({ slug }));
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -31,7 +33,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </svg>
           Back to Home
         </Link>
-
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
